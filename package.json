@@ -1,0 +1,29 @@
+{
+  "name": "eval-backend-expertise-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3darcart0/eval-backend-expertise-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3darcart0/eval-backend-expertise-backend/issues"
+  },
+  "homepage": "https://github.com/3darcart0/eval-backend-expertise-backend#readme",
+  "devDependencies": {
+    "serverless-offline": "^8.5.0"
+  },
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  }
+}
