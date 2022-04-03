@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/3darcart0/eval-backend-expertise-backend#readme",
   "devDependencies": {
+    "jest": "^27.5.1",
     "serverless-offline": "^8.5.0"
   },
   "dependencies": {
