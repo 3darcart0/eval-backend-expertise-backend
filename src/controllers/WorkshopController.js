@@ -5,14 +5,11 @@ module.exports.init = async (event) => {
     try {
         const operation = Util.getOperationRequest(event);
         let result;
-        switch (operation) {
-            case 'get-filter':
-                let payload = Util.getPayloadRequest(event);
-                result = await WorkshopService.getFilter(payload);
-                break;
-            default:
-                result = Util.getEmptyResponse();
-                break;
+        if (operation === 'get-filter') {
+            let payload = Util.getPayloadRequest(event);
+            result = await WorkshopService.getFilter(payload);
+        } else {
+            result = Util.getEmptyResponse();
         }
         return Util.getFormatResponse(result);
     } catch (error) {

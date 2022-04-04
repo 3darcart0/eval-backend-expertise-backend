@@ -5,14 +5,10 @@ module.exports.init = async (event) => {
     try {
         const operation = Util.getOperationRequest(event);
         let result;
-        switch (operation) {
-            case 'get-all':
-                result = await WorkshopTypeService.getAll();
-
-                break;
-            default:
-                result = Util.getEmptyResponse();
-                break;
+        if(operation === 'get-all'){
+            result = await WorkshopTypeService.getAll();
+        }else{
+            result = Util.getEmptyResponse();
         }
         return Util.getFormatResponse(result);
     } catch (error) {

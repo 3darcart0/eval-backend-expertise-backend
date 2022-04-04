@@ -5,14 +5,10 @@ module.exports.init = async (event) => {
     try {
         const operation = Util.getOperationRequest(event);
         let result;
-        switch (operation) {
-            case 'get-disticts-of-lima':
-                result = await WorkshopTypeService.getLima();
-
-                break;
-            default:
-                result = Util.getEmptyResponse();
-                break;
+        if(operation === 'get-disticts-of-lima'){
+            result = await WorkshopTypeService.getLima();
+        }else{
+            result = Util.getEmptyResponse();
         }
         return Util.getFormatResponse(result);
     } catch (error) {

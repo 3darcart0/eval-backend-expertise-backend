@@ -1,5 +1,4 @@
 const mysql = require("mysql2/promise");
-// const { promisify } = require("util");
 const database = require("../config/db.config");
 
 const pool = mysql.createPool(database);
@@ -19,8 +18,6 @@ pool.getConnection((err, connection) => {
 
     if (connection) connection.release();
     console.log("DB is Connected");
-
-    return;
 });
 
 module.exports = pool;
