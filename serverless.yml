@@ -59,6 +59,12 @@ provider:
 #    - include-me-dir/**
 
 functions:
+  workshop:
+    handler: src/controllers/WorkshopController.init
+    events:
+      - httpApi:
+          path: /workshop/{operation}
+          method: post
   vehicles:
     handler: src/controllers/VehicleController.init
     events:
