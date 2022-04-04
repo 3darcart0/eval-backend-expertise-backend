@@ -1,12 +1,12 @@
-const WorkshopTypeService = require("../services/WorkshopTypeService");
+const WorkshopTypeService = require("../services/UbigeoService");
 const Util = require("../utils/ConfigUtil");
 
 module.exports.init = async (event) => {
     try {
         const operation = Util.getOperationRequest(event);
         let result;
-        if(operation === 'get-all'){
-            result = await WorkshopTypeService.getAll();
+        if(operation === 'get-disticts-of-lima'){
+            result = await WorkshopTypeService.getLima();
         }else{
             result = Util.getEmptyResponse();
         }
