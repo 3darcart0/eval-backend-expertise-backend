@@ -59,6 +59,18 @@ provider:
 #    - include-me-dir/**
 
 functions:
+  vehicles:
+    handler: src/controllers/VehicleController.init
+    events:
+      - httpApi:
+          path: /vehicles/{operation}
+          method: post
+  ubigeo:
+    handler: src/controllers/UbigeoController.init
+    events:
+      - httpApi:
+          path: /ubigeo/{operation}
+          method: get
   typeWorkshop:
     handler: src/controllers/WorkshopTypeController.init
 #    The following are a few example events you can configure
